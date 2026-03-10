@@ -4,30 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Send Message</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Send a Message</h1>
-  <form action="mailto:septianrnaldi.dev@email.com" method="POST">
-    <label for="name">Name:</label>
-    <input type="text" id="name" required>
+  <div class="form-container">
+    <h1 style="text-align:center; margin-bottom:12px;">Send a Message</h1>
+    <form class="form-grid" action="mailto:septianrnaldi.dev@email.com" method="POST">
+      <div class="form-grid two-cols">
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
 
-    <br>
-    <br>
-    
-    <label for="email">Email:</label>
-    <input type="email" id="email" required>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+      </div>
 
-    <br>
-    <br>
-    
-    <label for="message">Message:</label>
-    <br>
-    <textarea id="message" name="message" required></textarea>
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+      </div>
 
-    <br>
-    <br>
-
-    <button type="submit">Send Message</button>
-  </form>
+      <div style="text-align:right;">
+        <button type="submit">Send Message</button>
+      </div>
+    </form>
+  </div>
 </body>
 </html>
